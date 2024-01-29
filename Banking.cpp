@@ -4,10 +4,10 @@ using namespace std;
 class Banking{
 	char name[20];
 	int account_num;
-	int phone_num;
-	char email[20];
+	long long int phone_num;
+	char email[50];
 	int choice1;
-	char choice2[5];
+	char choice2;
 	int choice3;
 	int cash;
 	int total;
@@ -27,19 +27,12 @@ class Banking{
 		void toContinue(){
 			cout<<"\t\tEnter Any Key N to Continue ...";
 			cin>>choice1;
-			switch(choice1){
-				case 1:
-					if(sizeof(choice1)==4){
-						cout<<"--------------------------------------------------------"<<endl;
-						logIn();
-					}else{
-						cout<<"Enter A Digit to Continue .";
-					}
-			}
 		}
 		void logIn(){
-			cout<<"\t\t-: Press A to Log In as Administrator OR S to log in as Staff : " ;
-			strcpy(this->choice2=choice2);
+			cout<<"--------------------------------------------------------"<<endl;
+			cout<<"\t\t-: Press A to Log In as Administrator   : "<<endl;
+			cout<<"\t\t\t\t OR  "<<endl;
+			cout<<"\t\t-: Press S to Log In as Staff   : ";
 			cin>>choice2;
 			switch(choice2){
 				case 'A':
@@ -48,16 +41,6 @@ class Banking{
 					cout<<"--------------------------------------------------------"<<endl;
 					break;
 				case 'S':
-					cout<<"--------------------------------------------------------"<<endl;
-					cout<<"\t\tStaff ."<<endl;
-					cout<<"--------------------------------------------------------"<<endl;
-					break;
-				case 'a':
-					cout<<"--------------------------------------------------------"<<endl;
-					cout<<"\t\tWelcome as Administrator ."<<endl;
-					cout<<"--------------------------------------------------------"<<endl;
-					break;
-				case 's':
 					cout<<"--------------------------------------------------------"<<endl;
 					cout<<"\t\tWelcome as Staff ."<<endl;
 					cout<<"--------------------------------------------------------"<<endl;
@@ -78,10 +61,10 @@ class Banking{
 		}
 		void getData(){
 			cout<<"--------------------------------------------------------"<<endl;
-			cout<<"\t\tName : \t\t"<<name;
-			cout<<"\t\tAccount Number : \t\t"<<account_num;
-			cout<<"\t\tPhone Number : \t\t"<<phone_num;
-			cout<<"\t\tE-Mail : \t\t"<<email;
+			cout<<"\t\tName :   "<<name<<endl;
+			cout<<"\t\tAccount Number :   "<<account_num<<endl;
+			cout<<"\t\tPhone Number :   "<<phone_num<<endl;
+			cout<<"\t\tE-Mail :   "<<email<<endl;
 		}
 		void Transaction(){
 			total=1000000;
